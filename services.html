@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Reunion Production</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-medium tracking-tight">
+                    Reunion Production
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="services.html" class="text-white border-b border-white border-opacity-30">
+                        Услуги
+                    </a>
+                    <a href="cases.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        Кейсы
+                    </a>
+                    <a href="projects.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        Проекты
+                    </a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        Контакты
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                    <span class="bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm transform"></span>
+                    <span class="bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm"></span>
+                    <span class="bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm transform"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden mobile-menu max-h-0 opacity-0 overflow-hidden">
+                <nav class="flex flex-col space-y-4 pt-6 pb-2">
+                    <a href="services.html" class="text-white text-left">
+                        Услуги
+                    </a>
+                    <a href="cases.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-left">
+                        Кейсы
+                    </a>
+                    <a href="projects.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-left">
+                        Проекты
+                    </a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-left">
+                        Контакты
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="pt-32 pb-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight mb-8 animate-fade-in">
+                    Наши услуги
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 animate-fade-in-up">
+                    Полный спектр услуг в области 3D графики и визуальных эффектов
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 3D Моделирование -->
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-blue-500 transition-all duration-300 animate-fade-in-up">
+                        <div class="mb-4">
+                            <i data-lucide="box" class="w-8 h-8 text-blue-500"></i>
+                        </div>
+                        <h2 class="text-2xl font-medium mb-4 text-white">3D Моделирование</h2>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Простая модель (low poly)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Средняя сложность</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Высокая детализация (hi-poly)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Текстурирование -->
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-blue-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.1s">
+                        <div class="mb-4">
+                            <i data-lucide="layers" class="w-8 h-8 text-blue-500"></i>
+                        </div>
+                        <h2 class="text-2xl font-medium mb-4 text-white">Текстурирование</h2>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Базовые PBR текстуры</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Комплексные текстуры (4K)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Риггинг и скиннинг -->
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-blue-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.2s">
+                        <div class="mb-4">
+                            <i data-lucide="bone" class="w-8 h-8 text-blue-500"></i>
+                        </div>
+                        <h2 class="text-2xl font-medium mb-4 text-white">Риггинг и скиннинг</h2>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Простой риг</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Продвинутый риг</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Анимация -->
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-blue-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.3s">
+                        <div class="mb-4">
+                            <i data-lucide="move" class="w-8 h-8 text-blue-500"></i>
+                        </div>
+                        <h2 class="text-2xl font-medium mb-4 text-white">Анимация</h2>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Простая анимация</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Комплексная сцена</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3D-Визуализация -->
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-blue-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.4s">
+                        <div class="mb-4">
+                            <i data-lucide="camera" class="w-8 h-8 text-blue-500"></i>
+                        </div>
+                        <h2 class="text-2xl font-medium mb-4 text-white">3D-Визуализация</h2>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Визуализация интерьера</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Продуктовая визуализация</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Архвиз экстерьера</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 2D Графика -->
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-blue-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.5s">
+                        <div class="mb-4">
+                            <i data-lucide="image" class="w-8 h-8 text-blue-500"></i>
+                        </div>
+                        <h2 class="text-2xl font-medium mb-4 text-white">2D Графика</h2>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>2D Иллюстрация</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Концепт-арт</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>UI/UX дизайн</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-1 mr-2 text-blue-500 flex-shrink-0"></i>
+                                <span>Спрайты и анимации</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16 animate-fade-in-up" style="animation-delay: 0.6s">
+                    <a href="assets/file/Расценки.xlsx" download class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-300">
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                        <span>Скачать полные расценки (XLSX)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-80 py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-4 gap-8 mb-12">
+                    <!-- Company Info -->
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-medium text-white mb-4">Reunion Production</h3>
+                            <p class="text-gray-400 leading-relaxed max-w-md">
+                                Профессиональная VFX студия, создающая миры с помощью 
+                                визуальных эффектов и компьютерной графики.
+                            </p>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="twitter" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="instagram" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="youtube" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-6">Навигация</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    Услуги
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cases.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    Кейсы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projects.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    Проекты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacts -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-6">Контакты</h4>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center">
+                                <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                                <a href="mailto:contact@reunionproduction.ru" class="hover:text-white transition-colors">
+                                    contact@reunionproduction.ru
+                                </a>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                                <a href="tel:+79999999999" class="hover:text-white transition-colors">
+                                    +7 (999) 999-99-99
+                                </a>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                <span>Москва, Россия</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="border-t border-gray-700 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                            © 2024 Reunion Production. Все права защищены.
+                        </div>
+                        
+                        <div class="flex space-x-6 text-sm">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                Политика конфиденциальности
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                Условия использования
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

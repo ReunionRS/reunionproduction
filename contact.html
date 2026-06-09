@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Reunion Production</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-medium tracking-tight">
+                    Reunion Production
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        Услуги
+                    </a>
+                    <a href="cases.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        Кейсы
+                    </a>
+                    <a href="index.html#projects" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        Проекты
+                    </a>
+                    <a href="contact.html" class="text-white border-b border-white border-opacity-30">
+                        Контакты
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden w-6 h-6 flex flex-col justify-center items-center">
+                    <span class="bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm transform"></span>
+                    <span class="bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5"></span>
+                    <span class="bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm transform"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden mobile-menu max-h-0 opacity-0">
+                <nav class="flex flex-col space-y-4 pt-6 pb-2">
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-left">
+                        Услуги
+                    </a>
+                    <a href="cases.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-left">
+                        Кейсы
+                    </a>
+                    <a href="index.html#projects" class="text-gray-400 hover:text-white transition-colors duration-300 text-left">
+                        Проекты
+                    </a>
+                    <a href="contact.html" class="text-white text-left">
+                        Контакты
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="pt-32 pb-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight mb-8 animate-fade-in">
+                    Контакты
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 animate-fade-in-up">
+                    Свяжитесь с нами для обсуждения вашего VFX проекта
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20 bg-gray-900 bg-opacity-30">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-16 animate-fade-in">
+                    
+                    <!-- Email Contact -->
+                    <div class="text-center bg-white bg-opacity-5 rounded-lg p-8 border border-white border-opacity-10 hover:border-opacity-20 transition-all duration-300">
+                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-500 bg-opacity-20">
+                            <i data-lucide="mail" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <h3 class="text-lg font-medium mb-3">Email</h3>
+                        <div class="space-y-2 text-gray-400">
+                            <a href="mailto:ilyagames9019@gmail.com" class="block hover:text-white transition-colors">
+                                ilyagames9019@gmail.com
+                            </a>
+                            <p class="text-sm">Ответ в течение 24 часов</p>
+                        </div>
+                    </div>
+
+                    <!-- Telegram Contact -->
+                    <div class="text-center bg-white bg-opacity-5 rounded-lg p-8 border border-white border-opacity-10 hover:border-opacity-20 transition-all duration-300">
+                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-blue-500 bg-opacity-20">
+                            <i data-lucide="send" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-lg font-medium mb-3">Telegram</h3>
+                        <div class="space-y-2 text-gray-400">
+                            <a href="https://t.me/ReunionProduction" target="_blank" rel="noopener noreferrer" class="block hover:text-white transition-colors">
+                                @ReunionProduction
+                            </a>
+                            <p class="text-sm">Быстрые ответы 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6">
+                        Расскажите о вашем проекте
+                    </h2>
+                    <p class="text-xl text-gray-400">
+                        Заполните форму, и мы свяжемся с вами в течение 24 часов
+                    </p>
+                </div>
+
+                <form id="contact-form" class="space-y-8 animate-fade-in">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-3">
+                                Ваше имя *
+                            </label>
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                class="w-full px-4 py-4 bg-white bg-opacity-5 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white focus:border-opacity-40 transition-colors duration-300"
+                                placeholder="Введите ваше имя"
+                            />
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-3">
+                                Email *
+                            </label>
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                class="w-full px-4 py-4 bg-white bg-opacity-5 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white focus:border-opacity-40 transition-colors duration-300"
+                                placeholder="your@email.com"
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-3">
+                            Описание проекта *
+                        </label>
+                        <textarea
+                            name="message"
+                            rows="6"
+                            required
+                            class="w-full px-4 py-4 bg-white bg-opacity-5 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white focus:border-opacity-40 transition-colors duration-300 resize-none"
+                            placeholder="Опишите ваш проект: что нужно сделать, стиль, референсы, особые требования..."
+                        ></textarea>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <input
+                            type="checkbox"
+                            id="privacy"
+                            name="privacy"
+                            required
+                            class="mt-1 w-4 h-4 text-blue-500 bg-transparent border border-white border-opacity-20 rounded focus:ring-blue-500 focus:ring-2"
+                        />
+                        <label for="privacy" class="text-sm text-gray-400">
+                            Я согласен на обработку персональных данных и с 
+                            <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">политикой конфиденциальности</a> *
+                        </label>
+                    </div>
+
+                    <div class="text-center pt-6">
+                        <button
+                            type="submit"
+                            id="submit-btn"
+                            class="inline-flex items-center justify-center space-x-2 px-12 py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-w-[250px]"
+                        >
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <span>Отправить заявку</span>
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-xs text-gray-500">
+                            * Обязательные поля. Мы ответим в течение 24 часов.<br/>
+                            Ваши данные защищены и не передаются третьим лицам.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-900 bg-opacity-30">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-medium text-center mb-16 animate-fade-in">
+                    Часто задаваемые вопросы
+                </h2>
+                
+                <div class="space-y-6 animate-fade-in-up">
+                    <div class="bg-white bg-opacity-5 rounded-lg p-6 border border-white border-opacity-10 hover:border-opacity-20 transition-all duration-300">
+                        <h3 class="text-lg font-medium mb-3 text-white">
+                            Сколько стоят ваши услуги?
+                        </h3>
+                        <p class="text-gray-400">
+                            Стоимость зависит от сложности проекта. VFX от 5000₽, 3D моделирование от 3000₽, 
+                            анимация от 8000₽/сек. Точную стоимость рассчитаем после обсуждения технического задания.
+                        </p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-5 rounded-lg p-6 border border-white border-opacity-10 hover:border-opacity-20 transition-all duration-300">
+                        <h3 class="text-lg font-medium mb-3 text-white">
+                            Какие сроки выполнения работ?
+                        </h3>
+                        <p class="text-gray-400">
+                            Сроки зависят от объема и сложности: концепт-арт 1-7 дней, 3D модели 2-10 дней, 
+                            VFX 3-14 дней, анимация 5-21 день. Возможно ускорение сроков за дополнительную плату.
+                        </p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-5 rounded-lg p-6 border border-white border-opacity-10 hover:border-opacity-20 transition-all duration-300">
+                        <h3 class="text-lg font-medium mb-3 text-white">
+                            В каких форматах вы предоставляете результат?
+                        </h3>
+                        <p class="text-gray-400">
+                            Видео: MP4, MOV, AVI в разрешении до 4K. 3D модели: FBX, OBJ, Blend. 
+                            Изображения: PNG, JPEG, TIFF, PSD. Проектные файлы по согласованию.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16 items-center animate-fade-in">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-medium mb-6">
+                            Работаем удаленно
+                        </h2>
+                        <div class="space-y-6 text-gray-400">
+                            <p>
+                                Мы работаем с клиентами по всему миру. Основная команда находится в России, 
+                                но географических ограничений для наших проектов нет.
+                            </p>
+                            <p>
+                                Все коммуникации ведем через Telegram и email. 
+                                Предоставляем регулярные отчеты о ходе работ и демонстрируем промежуточные результаты.
+                            </p>
+                            <div class="flex items-center space-x-4 pt-4">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="globe" class="w-5 h-5 text-blue-400"></i>
+                                    <span>Международные проекты</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="wifi" class="w-5 h-5 text-green-400"></i>
+                                    <span>Удаленная работа</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="aspect-video bg-gradient-to-br from-blue-600 via-purple-600 to-red-600 rounded-lg opacity-20 animate-pulse-slow"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <i data-lucide="map-pin" class="w-16 h-16 mx-auto mb-4 text-blue-400"></i>
+                                <h3 class="text-xl font-medium mb-2">Россия, MSK</h3>
+                                <p class="text-gray-400">UTC+3 Timezone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-80 py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-4 gap-8 mb-12">
+                    <!-- Company Info -->
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-medium text-white mb-4">Reunion Production</h3>
+                            <p class="text-gray-400 leading-relaxed max-w-md">
+                                Профессиональная VFX студия, создающая миры с помощью 
+                                визуальных эффектов и компьютерной графики.
+                            </p>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="twitter" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="instagram" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="youtube" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 group">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-gray-400 group-hover:text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-6">Навигация</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    Услуги
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cases.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    Кейсы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projects.html" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    Проекты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacts -->
+                    <div>
+                        <h4 class="text-lg font-medium text-white mb-6">Контакты</h4>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center">
+                                <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                                <a href="mailto:contact@reunionproduction.ru" class="hover:text-white transition-colors">
+                                    contact@reunionproduction.ru
+                                </a>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                                <a href="tel:+79999999999" class="hover:text-white transition-colors">
+                                    +7 (999) 999-99-99
+                                </a>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                <span>Москва, Россия</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="border-t border-gray-700 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                            © 2024 Reunion Production. Все права защищены.
+                        </div>
+                        
+                        <div class="flex space-x-6 text-sm">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                Политика конфиденциальности
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                Условия использования
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <script src="assets/js/script.js"></script>
+    <!-- Notification container -->
+    <div id="notifications"></div>

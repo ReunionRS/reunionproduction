@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunion Production - сайты, Android, Unity и UE5</title>
+    <meta name="description" content="Reunion Production создает сайты и лендинги, Android-приложения, C# скрипты для Unity и 3D-сцены для Virtual Production в Unreal Engine 5.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #020204;
+            color: #fff;
+            text-rendering: optimizeLegibility;
+        }
+
+        .hero-overlay {
+            background:
+                radial-gradient(circle at 50% 35%, rgba(59, 130, 246, 0.2), transparent 36%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.84));
+        }
+
+        .mobile-menu {
+            transition: max-height 260ms ease, opacity 260ms ease;
+        }
+
+        .section-band {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)),
+                #050507;
+        }
+
+        .case-card img {
+            transition: transform 320ms ease;
+        }
+
+        .case-card:hover img {
+            transform: scale(1.045);
+        }
+
+        .fade-in {
+            animation: fadeIn 820ms ease both;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 820ms ease both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 1ms !important;
+                transition-duration: 1ms !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
+            <a href="#hero" class="flex items-center gap-3 text-lg font-medium tracking-tight">
+                <img src="assets/png/ReunionRs.png" alt="" class="h-9 w-9 rounded-md object-contain">
+                <span>Reunion Production</span>
+            </a>
+
+            <nav class="hidden items-center gap-8 text-sm md:flex">
+                <a href="#cases" class="text-gray-300 transition-colors hover:text-white">Кейсы</a>
+                <a href="#services" class="text-gray-300 transition-colors hover:text-white">Услуги</a>
+                <a href="#clients" class="text-gray-300 transition-colors hover:text-white">Клиенты</a>
+                <a href="#cta" class="text-gray-300 transition-colors hover:text-white">Формат работы</a>
+                <a href="#contact" class="text-gray-300 transition-colors hover:text-white">Контакты</a>
+            </nav>
+
+            <a href="#contact" class="hidden rounded-lg bg-white px-5 py-3 text-sm font-medium text-black transition-colors hover:bg-gray-100 md:inline-flex">
+                Обсудить проект
+            </a>
+
+            <button id="mobile-menu-btn" class="flex h-10 w-10 items-center justify-center rounded-lg border border-white border-opacity-15 md:hidden" aria-label="Открыть меню">
+                <i data-lucide="menu" class="h-5 w-5"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu max-h-0 overflow-hidden opacity-0 md:hidden">
+            <nav class="mx-5 mb-5 flex flex-col gap-4 rounded-lg border border-white border-opacity-10 bg-black bg-opacity-95 p-5 text-sm">
+                <a href="#cases" class="mobile-link text-gray-300">Кейсы</a>
+                <a href="#services" class="mobile-link text-gray-300">Услуги</a>
+                <a href="#clients" class="mobile-link text-gray-300">Клиенты</a>
+                <a href="#cta" class="mobile-link text-gray-300">Формат работы</a>
+                <a href="#contact" class="mobile-link text-gray-300">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative flex min-h-screen items-center overflow-hidden">
+            <video class="absolute inset-0 h-full w-full object-cover" autoplay muted loop playsinline poster="assets/png/1.jpg">
+                <source src="assets/video/herovideo.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay absolute inset-0"></div>
+
+            <div class="relative z-10 mx-auto grid min-h-screen max-w-7xl items-end px-5 pb-20 pt-32 md:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-0">
+                <div class="fade-in-up max-w-4xl">
+                    <h1 class="text-4xl font-medium tracking-tight text-white md:text-6xl lg:text-7xl">
+                        Создаем digital-продукты и 3D-сцены для продакшна
+                    </h1>
+                    <p class="mt-8 max-w-2xl text-lg leading-relaxed text-gray-200 md:text-2xl">
+                        Reunion Production делает лендинги, Android-приложения, Unity-задачи и 3D-сцены для Virtual Production.
+                    </p>
+                    <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-7 py-4 font-medium text-black transition-colors hover:bg-gray-100">
+                            Рассчитать проект
+                            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#cases" class="inline-flex items-center justify-center gap-2 rounded-lg border border-white border-opacity-20 px-7 py-4 font-medium text-white transition-colors hover:bg-white hover:bg-opacity-10">
+                            Смотреть кейсы
+                            <i data-lucide="play" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden justify-end lg:flex">
+                    <div class="w-full max-w-sm border-l border-white border-opacity-15 pl-8">
+                        <div class="grid gap-8">
+                            <div>
+                                <div class="text-4xl font-semibold text-white">4</div>
+                                <div class="mt-2 text-sm text-gray-300">основных направления разработки</div>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-semibold text-white">7 лет</div>
+                                <div class="mt-2 text-sm text-gray-300">опыта в digital и 3D-продакшне</div>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-semibold text-white">24 часа</div>
+                                <div class="mt-2 text-sm text-gray-300">на первичный ответ по заявке</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="bg-black py-20 md:py-28">
+            <div class="mx-auto max-w-7xl px-5 md:px-8">
+                <div class="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <p class="mb-3 text-sm uppercase tracking-[0.18em] text-blue-300">Кейсы</p>
+                        <h2 class="text-4xl font-medium tracking-tight md:text-6xl">Работы, которые можно разобрать по кадрам</h2>
+                    </div>
+                </div>
+
+                <div class="grid gap-10">
+                    <article class="case-card grid overflow-hidden rounded-lg border border-white border-opacity-10 bg-white bg-opacity-5 lg:grid-cols-[0.95fr_1.25fr]">
+                        <div class="flex min-h-[360px] flex-col justify-between p-7 md:p-10">
+                            <div>
+                                <div class="mb-8 flex items-center justify-between gap-5 text-sm text-gray-400">
+                                    <span>01</span>
+                                    <span>portal / virtual production</span>
+                                </div>
+                                <h3 class="text-3xl font-medium tracking-tight md:text-5xl">VPRussia</h3>
+                                <p class="mt-5 text-lg leading-relaxed text-gray-300">
+                                    Технологический портал о виртуальном продакшене: новости, каталог, статьи, образовательные материалы и биржа.
+                                </p>
+                            </div>
+                            <div class="mt-8 grid gap-3 text-sm text-gray-400 sm:grid-cols-2">
+                                <div>
+                                    <div class="text-white">Задача</div>
+                                    <div class="mt-1">медиа-портал</div>
+                                </div>
+                                <div>
+                                    <div class="text-white">Формат</div>
+                                    <div class="mt-1">сайт</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative min-h-[320px] overflow-hidden">
+                            <img src="assets/png/cases/vprussia.png" alt="Скриншот сайта VPRussia" class="h-full w-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-40"></div>
+                        </div>
+                    </article>
+
+                    <article class="case-card grid overflow-hidden rounded-lg border border-white border-opacity-10 bg-white bg-opacity-5 lg:grid-cols-[0.95fr_1.25fr]">
+                        <div class="flex min-h-[360px] flex-col justify-between p-7 md:p-10">
+                            <div>
+                                <div class="mb-8 flex items-center justify-between gap-5 text-sm text-gray-400">
+                                    <span>02</span>
+                                    <span>web / videostudio</span>
+                                </div>
+                                <h3 class="text-3xl font-medium tracking-tight md:text-5xl">28Q Videostudio</h3>
+                                <p class="mt-5 text-lg leading-relaxed text-gray-300">
+                                    Сайт видеостудии с позиционированием, услугами, примерами работ, контактами и выразительным первым экраном.
+                                </p>
+                            </div>
+                            <div class="mt-8 grid gap-3 text-sm text-gray-400 sm:grid-cols-2">
+                                <div>
+                                    <div class="text-white">Задача</div>
+                                    <div class="mt-1">презентация студии</div>
+                                </div>
+                                <div>
+                                    <div class="text-white">Формат</div>
+                                    <div class="mt-1">сайт</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative min-h-[320px] overflow-hidden">
+                            <img src="assets/png/cases/28q.png" alt="Скриншот сайта 28Q Videostudio" class="h-full w-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-40"></div>
+                        </div>
+                    </article>
+
+                    <article class="case-card grid overflow-hidden rounded-lg border border-white border-opacity-10 bg-white bg-opacity-5 lg:grid-cols-[0.95fr_1.25fr]">
+                        <div class="flex min-h-[360px] flex-col justify-between p-7 md:p-10">
+                            <div>
+                                <div class="mb-8 flex items-center justify-between gap-5 text-sm text-gray-400">
+                                    <span>03</span>
+                                    <span>flutter / node.js</span>
+                                </div>
+                                <h3 class="text-3xl font-medium tracking-tight md:text-5xl">Lumen Group</h3>
+                                <p class="mt-5 text-lg leading-relaxed text-gray-300">
+                                    Fullstack-приложение: Flutter-клиент и Node.js/Express API для управления пользовательскими сценариями.
+                                </p>
+                            </div>
+                            <div class="mt-8 grid gap-3 text-sm text-gray-400 sm:grid-cols-2">
+                                <div>
+                                    <div class="text-white">Задача</div>
+                                    <div class="mt-1">личный кабинет</div>
+                                </div>
+                                <div>
+                                    <div class="text-white">Формат</div>
+                                    <div class="mt-1">Flutter + API</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative min-h-[320px] overflow-hidden">
+                            <img src="assets/png/cases/lumen.png" alt="Скриншот Flutter приложения Lumen Group" class="h-full w-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-20"></div>
+                        </div>
+                    </article>
+
+                    <article class="case-card grid overflow-hidden rounded-lg border border-white border-opacity-10 bg-white bg-opacity-5 lg:grid-cols-[0.95fr_1.25fr]">
+                        <div class="flex min-h-[360px] flex-col justify-between p-7 md:p-10">
+                            <div>
+                                <div class="mb-8 flex items-center justify-between gap-5 text-sm text-gray-400">
+                                    <span>04</span>
+                                    <span>flutter / crm</span>
+                                </div>
+                                <h3 class="text-3xl font-medium tracking-tight md:text-5xl">МартСтрой CRM</h3>
+                                <p class="mt-5 text-lg leading-relaxed text-gray-300">
+                                    Flutter CRM для строительной команды: авторизация, рабочий интерфейс и база для внутренних бизнес-процессов.
+                                </p>
+                            </div>
+                            <div class="mt-8 grid gap-3 text-sm text-gray-400 sm:grid-cols-2">
+                                <div>
+                                    <div class="text-white">Задача</div>
+                                    <div class="mt-1">CRM-система</div>
+                                </div>
+                                <div>
+                                    <div class="text-white">Формат</div>
+                                    <div class="mt-1">Flutter web</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative min-h-[320px] overflow-hidden">
+                            <img src="assets/png/cases/martstroy-crm.png" alt="Скриншот Flutter CRM МартСтрой" class="h-full w-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-40"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section-band py-20 md:py-28">
+            <div class="mx-auto max-w-7xl px-5 md:px-8">
+                <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+                    <div class="flex flex-col justify-start">
+                        <p class="mb-3 text-sm uppercase tracking-[0.18em] text-blue-300">Услуги</p>
+                        <h2 class="text-5xl font-medium tracking-tight text-white">Разрабатываем с нуля и развиваем существующие проекты</h2>
+                        <p class="mt-6 text-lg leading-relaxed text-gray-400">
+                            Создаем рабочие digital-продукты и сильный визуал для продуктов, приложений и 3D-проектов. Прорабатываем архитектуру, интерфейсы, анимацию и финальную подачу.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <details class="service-item" open>
+                            <summary>
+                                <span class="text-xl font-medium">Сайты / Лендинги</span>
+                                <i data-lucide="chevron-down" class="service-toggle-icon h-5 w-5 text-white"></i>
+                            </summary>
+                            <div class="service-panel text-gray-300">
+                                <p class="text-sm leading-relaxed">
+                                    Разрабатываем посадочные страницы, промо-сайты и корпоративные сайты, которые продают и работают на результат. Делаем понятную структуру, адаптивный интерфейс и техническую базу для запуска.
+                                </p>
+                                <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-300">
+                                    <li>проработка цели и структуры страницы</li>
+                                    <li>UX/UI дизайн для всех устройств</li>
+                                    <li>быстрая и чистая верстка</li>
+                                    <li>подключение форм, мессенджеров и аналитики</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="service-item">
+                            <summary>
+                                <span class="text-xl font-medium">Android приложения</span>
+                                <i data-lucide="chevron-down" class="service-toggle-icon h-5 w-5 text-white"></i>
+                            </summary>
+                            <div class="service-panel text-gray-300">
+                                <p class="text-sm leading-relaxed">
+                                    Разрабатываем Android-приложения для сервисов, утилит и бизнес-задач. Работаем от архитектуры до публикации, чтобы приложение было стабильным, удобным и готовым к запуску.
+                                </p>
+                                <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-300">
+                                    <li>прототипирование и UX для мобильного взаимодействия</li>
+                                    <li>интеграции с API, базами данных и облачными сервисами</li>
+                                    <li>анимации, переходы и отзывчивый интерфейс</li>
+                                    <li>сборка, контроль качества и публикация в Google Play</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="service-item">
+                            <summary>
+                                <span class="text-xl font-medium">Аутсорс C# скриптов на Unity</span>
+                                <i data-lucide="chevron-down" class="service-toggle-icon h-5 w-5 text-white"></i>
+                            </summary>
+                            <div class="service-panel text-gray-300">
+                                <p class="text-sm leading-relaxed">
+                                    Подключаемся к Unity-проектам и пишем C# скрипты для механик, UI, инструментов и внутренних систем. Гарантируем понятный код, быструю интеграцию и поддержку в текущем проекте.
+                                </p>
+                                <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-300">
+                                    <li>геймплейные механики и взаимодействия</li>
+                                    <li>настройка UI, HUD, меню и событий</li>
+                                    <li>инструменты редактора и автоматизация задач</li>
+                                    <li>оптимизация, отладка и сопровождение</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="service-item">
+                            <summary>
+                                <span class="text-xl font-medium">Создание 3D сцен для Virtual Production UE5</span>
+                                <i data-lucide="chevron-down" class="service-toggle-icon h-5 w-5 text-white"></i>
+                            </summary>
+                            <div class="service-panel text-gray-300">
+                                <p class="text-sm leading-relaxed">
+                                    Создаем сцены для Virtual Production в Unreal Engine 5: окружение, свет, материалы и подготовку для съемок на LED-стене. Уделяем внимание качеству визуала и технической совместимости.
+                                </p>
+                                <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-300">
+                                    <li>компоновка сцены и работа с масштабом</li>
+                                    <li>настройка света, материалов и атмосферы</li>
+                                    <li>оптимизация для реального времени и рендера</li>
+                                    <li>подготовка ассетов и финальная проверка сцены</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="section-band py-20 md:py-24">
+            <div class="mx-auto max-w-7xl px-5 md:px-8">
+                <div class="mb-12 max-w-3xl">
+                    <p class="mb-3 text-sm uppercase tracking-[0.18em] text-blue-300">С кем работали</p>
+                    <h2 class="text-4xl font-medium tracking-tight md:text-5xl">Подключаемся к командам, которым важен сильный визуал</h2>
+                </div>
+
+                <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="rounded-lg border border-white border-opacity-10 bg-black bg-opacity-40 p-6">
+                        <i data-lucide="film" class="mb-5 h-7 w-7 text-blue-300"></i>
+                        <h3 class="font-medium">Бизнес и эксперты</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-gray-400">Лендинги, промо-страницы и простые сайты для запуска услуг.</p>
+                    </div>
+                    <div class="rounded-lg border border-white border-opacity-10 bg-black bg-opacity-40 p-6">
+                        <i data-lucide="megaphone" class="mb-5 h-7 w-7 text-blue-300"></i>
+                        <h3 class="font-medium">Бренды и реклама</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-gray-400">Сайты, приложения и digital-инструменты под конкретные процессы.</p>
+                    </div>
+                    <div class="rounded-lg border border-white border-opacity-10 bg-black bg-opacity-40 p-6">
+                        <i data-lucide="gamepad-2" class="mb-5 h-7 w-7 text-blue-300"></i>
+                        <h3 class="font-medium">Игровые проекты</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-gray-400">Unity C# задачи, прототипы, игровые механики и вспомогательные системы.</p>
+                    </div>
+                    <div class="rounded-lg border border-white border-opacity-10 bg-black bg-opacity-40 p-6">
+                        <i data-lucide="monitor-play" class="mb-5 h-7 w-7 text-blue-300"></i>
+                        <h3 class="font-medium">Virtual Production</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-gray-400">3D-сцены, окружения и подготовка пространства для Unreal Engine 5.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="bg-black py-20 md:py-28">
+            <div class="mx-auto max-w-7xl px-5 md:px-8">
+                <div class="grid gap-10 rounded-lg border border-white border-opacity-10 bg-white bg-opacity-5 p-7 md:grid-cols-[1fr_0.8fr] md:p-12">
+                    <div>
+                        <p class="mb-4 text-sm uppercase tracking-[0.18em] text-blue-300">CTA</p>
+                        <h2 class="text-4xl font-medium tracking-tight md:text-5xl">Есть идея, сайт, приложение или сцена, которую нужно собрать?</h2>
+                        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-300">
+                            Пришлите описание задачи, референсы и желаемые сроки. Мы оценим объем, предложим формат работы и подскажем, как быстрее довести проект до результата.
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-between gap-8">
+                        <div class="grid gap-4 text-sm text-gray-300">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check" class="mt-0.5 h-5 w-5 text-green-400"></i>
+                                <span>Разбираем задачу и собираем понятный план производства.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check" class="mt-0.5 h-5 w-5 text-green-400"></i>
+                                <span>Можно начать с одного шота или небольшого тестового блока.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check" class="mt-0.5 h-5 w-5 text-green-400"></i>
+                                <span>Работаем удаленно и держим коммуникацию короткой и прозрачной.</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-7 py-4 font-medium text-black transition-colors hover:bg-gray-100">
+                            Оставить заявку
+                            <i data-lucide="arrow-down" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-band py-20 md:py-28">
+            <div class="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[0.85fr_1.15fr]">
+                <div>
+                    <p class="mb-3 text-sm uppercase tracking-[0.18em] text-blue-300">Контактная форма</p>
+                    <h2 class="text-4xl font-medium tracking-tight md:text-5xl">Расскажите о проекте</h2>
+                    <p class="mt-6 text-lg leading-relaxed text-gray-400">
+                        Опишите задачу в свободной форме. Для быстрой оценки полезны ссылки на референсы, желаемый функционал, платформу и сроки.
+                    </p>
+                    <div class="mt-8 space-y-4 text-gray-300">
+                        <a href="mailto:ilyagames9019@gmail.com" class="flex items-center gap-3 transition-colors hover:text-white">
+                            <i data-lucide="mail" class="h-5 w-5 text-blue-300"></i>
+                            ilyagames9019@gmail.com
+                        </a>
+                        <a href="https://t.me/ReunionProduction" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 transition-colors hover:text-white">
+                            <i data-lucide="send" class="h-5 w-5 text-blue-300"></i>
+                            @ReunionProduction
+                        </a>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="rounded-lg border border-white border-opacity-10 bg-black bg-opacity-45 p-6 md:p-8">
+                    <div class="grid gap-6 md:grid-cols-2">
+                        <div>
+                            <label for="name" class="mb-2 block text-sm text-gray-300">Ваше имя *</label>
+                            <input id="name" name="name" type="text" required placeholder="Введите имя" class="w-full rounded-lg border border-white border-opacity-15 bg-white bg-opacity-5 px-4 py-4 text-white outline-none transition-colors placeholder:text-gray-500 focus:border-blue-300">
+                        </div>
+                        <div>
+                            <label for="email" class="mb-2 block text-sm text-gray-300">Email или Telegram *</label>
+                            <input id="email" name="email" type="text" required placeholder="email или @username" class="w-full rounded-lg border border-white border-opacity-15 bg-white bg-opacity-5 px-4 py-4 text-white outline-none transition-colors placeholder:text-gray-500 focus:border-blue-300">
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <label for="project" class="mb-2 block text-sm text-gray-300">Что нужно сделать *</label>
+                        <textarea id="project" name="project" rows="6" required placeholder="Коротко опишите задачу, сроки, формат и референсы..." class="w-full resize-none rounded-lg border border-white border-opacity-15 bg-white bg-opacity-5 px-4 py-4 text-white outline-none transition-colors placeholder:text-gray-500 focus:border-blue-300"></textarea>
+                    </div>
+
+                    <div class="mt-6 flex items-start gap-3">
+                        <input id="privacy" name="privacy" type="checkbox" required class="mt-1 h-4 w-4 rounded border-white border-opacity-20 bg-transparent">
+                        <label for="privacy" class="text-sm leading-relaxed text-gray-400">
+                            Я согласен на обработку персональных данных для ответа на заявку.
+                        </label>
+                    </div>
+
+                    <button id="submit-btn" type="submit" class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-white px-7 py-4 font-medium text-black transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-60 md:w-auto">
+                        <i data-lucide="send" class="h-5 w-5"></i>
+                        <span>Отправить заявку</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-10">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-sm text-gray-500 md:flex-row md:items-center md:justify-between md:px-8">
+            <div>© 2026 Reunion Production. Все права защищены.</div>
+            <div class="flex gap-5">
+                <a href="https://t.me/ReunionProduction" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-white">Telegram</a>
+                <a href="mailto:ilyagames9019@gmail.com" class="transition-colors hover:text-white">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="pointer-events-none fixed right-5 top-5 z-50 translate-x-6 rounded-lg bg-green-500 px-5 py-4 text-sm font-medium text-white opacity-0 shadow-lg transition-all duration-300">
+        Заявка подготовлена. Мы свяжемся с вами в течение 24 часов.
+    </div>
+
+    <script>
+        const header = document.getElementById('header');
+        const menuButton = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const contactForm = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-btn');
+        const notification = document.getElementById('notification');
+        let menuOpen = false;
+
+        function updateHeader() {
+            if (window.scrollY > 40) {
+                header.classList.add('bg-black', 'bg-opacity-90', 'backdrop-blur-sm');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-black', 'bg-opacity-90', 'backdrop-blur-sm');
+                header.classList.add('bg-transparent');
+            }
+        }
+
+        function setMenu(open) {
+            menuOpen = open;
+            mobileMenu.style.maxHeight = open ? '260px' : '0';
+            mobileMenu.style.opacity = open ? '1' : '0';
+            menuButton.innerHTML = open
+                ? '<i data-lucide="x" class="h-5 w-5"></i>'
+                : '<i data-lucide="menu" class="h-5 w-5"></i>';
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        menuButton.addEventListener('click', () => setMenu(!menuOpen));
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => setMenu(false));
+        });
+
+        contactForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const originalHtml = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span>Отправка...</span>';
+
+            setTimeout(() => {
+                contactForm.reset();
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalHtml;
+                notification.classList.remove('translate-x-6', 'opacity-0');
+                notification.classList.add('translate-x-0', 'opacity-100');
+
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+
+                setTimeout(() => {
+                    notification.classList.add('translate-x-6', 'opacity-0');
+                    notification.classList.remove('translate-x-0', 'opacity-100');
+                }, 4200);
+            }, 900);
+        });
+
+        updateHeader();
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
